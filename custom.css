@@ -1,0 +1,715 @@
+body{
+    /* width: 100%; */
+    
+    background-image: url("night-sky.jpeg");
+    background-repeat: no-repeat;
+   
+    /* background-position: 50% 50%; */
+}
+
+.container{
+    /* width: 30%; */
+    /* height: 100%; */
+    position: relative;
+    /* top: -100px; */
+    margin: -270px auto;
+    padding: 100px;
+    height: 270px;
+     perspective: 100px;
+     transform: rotateZ(-60deg); 
+     display: flex;
+     justify-content: space-around;
+    /* transform-style: preserve-3d; */
+    /* transform: rotateZ(45deg);  */
+
+    /* add this ppty to last circle */
+    
+    /* border: 1px solid blue;   */
+}
+
+h1{
+    position: relative;
+    /* left: 400px; */
+    background: #FDB813;
+    width: 20%;
+    margin: 20px 40px;
+    padding: 20px;
+    text-align: center;
+}
+
+#the-sun {
+    /* background-image: url("images/the-sun1.png");
+    background-position: center center;
+    background-size: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px; */
+    /* margin: -10px 0; */
+    /* margin: -35px 0;*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -15px 0 0 -15px;
+    border-radius: 50%;
+    /* border: 1px solid #f7db44; */
+    /* background-image: url("images/the-sun1.png");
+    background-position: center center;
+    background-size: cover;
+    */
+}
+.circle-wrapper {
+    transform: translateZ(-100px) scaleX(1.8);
+    transform-style: preserve-3d;
+    position: relative;
+    top: 100%;
+}
+
+.circle1{
+    position: absolute;
+    /* top: 100%; */
+    left: 50%;
+    width: 700px;
+    height: 700px;
+    margin: -350px 0 0 -350px;
+    border-radius: 50%;
+    border: 1px solid  #5383fa;
+    transform-style: preserve-3d; 
+}
+
+.neptune-axis-animation{
+    position: relative;
+    width: 700px;
+    height: 700px;
+    animation: rotation 40s linear reverse infinite; 
+}
+
+.circle2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 600px;
+    height: 600px;
+    margin: -300px 0 0 -300px;
+    border-radius: 50%;
+    border: 1px solid #01a1cc; 
+    /* animation: rotation 35s linear reverse infinite;  */
+}
+
+.uranus-axis-animation{
+    position: relative;
+    width: 600px;
+    height: 600px;
+    animation: rotation 35s linear reverse infinite; 
+}
+
+.circle3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 500px;
+    height: 500px;
+    margin: -250px 0 0 -250px;
+    border-radius: 50%;
+    border: 1px solid #cdae74; 
+    /* animation: rotation 30s linear reverse infinite;  */
+}
+
+.saturn-axis-animation{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    animation: rotation 30s linear reverse infinite; 
+}
+
+.circle4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin: -200px 0 0 -200px;
+    border-radius: 50%;
+    border: 1px solid #f79f43; 
+    /* animation: rotation 25s linear reverse infinite;  */
+}
+
+.jupiter-axis-animation{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    animation: rotation 25s linear reverse infinite; 
+}
+
+.circle5{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 320px;
+    height: 320px;
+    margin: -160px 0 0 -160px;
+    border-radius: 50%;
+    border: 1px solid #c75941; 
+    /* animation: rotation 20s linear reverse infinite;  */
+}
+
+.mars-axis-animation{
+    position: relative;
+    width: 320px;
+    height: 320px;
+    animation: rotation 20s linear reverse infinite; 
+}
+
+.circle6{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 250px;
+    height: 250px;
+    margin: -125px 0 0 -125px;
+    border-radius: 50%;
+    border: 1px solid #283a5b; 
+    /* animation: rotation 15s linear reverse infinite;  */
+}
+
+.earth-axis-animation{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    animation: rotation 15s linear reverse infinite; 
+}
+
+.circle7{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 160px;
+    height: 160px;
+    margin: -80px 0 0 -80px;
+    border-radius: 50%;
+    border: 1px solid #be2f0f;
+    /* animation: rotation 10s linear reverse infinite;  */
+}
+
+.venus-axis-animation{
+    position: relative;
+    width: 160px;
+    height: 160px;
+    animation: rotation 10s linear reverse infinite; 
+}
+
+.circle8{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    margin: -50px 0 0 -50px;
+    border-radius: 50%;
+    border: 1px solid #3c3c3c; 
+    /* animation: rotation 5s linear reverse infinite; */
+}
+
+.mercury-axis-animation{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    animation: rotation 5s linear reverse infinite; 
+}
+
+.circle9{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin: -35px 0 0 -35px;
+    background-image: url("images/the-sun1.png");
+    background-position: center center;
+    background-size: cover;
+    /* animation: rotation 40s linear reverse infinite; */
+    animation: rotation 2s linear reverse infinite;
+}
+
+.threeDee-box{
+    width: 0;
+    height: 0;
+    margin: 0 auto;
+    position: relative;
+    top: 100px;
+    /* left: 50px; */
+    perspective: 500px;
+}
+
+.threeDee-object{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+
+.circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+}
+
+#mercury{
+    background-image: url("images/mercury.jpg");
+    background-position: center center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+    transform: translate(45px, -20px);
+}
+
+#mercury::before{
+    content: "Mer";
+    display: inline-block;
+    color: white;
+    background: black;
+    font-size: 18px;
+}
+
+#venus{
+  background-image: url("images/venus.jpg");
+    background-position: center center;
+    background-size: cover;
+    /* position: relative; */
+    width: 55px;
+    height: 55px;
+    transform: translate(120px, 10px);
+}
+
+#venus::before{
+    content: "Ven";
+    display: inline-block;
+    color: white;
+    background: black;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+#earth{
+    background-image: url("images/earth.jpg");
+    background-position: center center;
+    background-size: cover;
+    /* position: relative; */
+    width: 70px;
+    height: 70px;
+    transform: translate(100px, -30px);
+}
+
+#earth::before{
+    content: "Ear";
+    display: inline-block;
+    color: white;
+    background: black;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+#mars{
+     background-image: url("images/mars.jpg");
+    background-position: center center;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    margin: 60px 0;
+    transform: translate(220px, 210px);
+}
+
+#mars::before{
+    content: "Mar";
+    display: inline-block;
+    color: white;
+    background: black;
+    font-size: 18px;
+    margin: 0 10px;
+}
+
+#jupiter{
+    background-image: url("images/jupiter.jpg");
+    background-position: center center;
+    background-size: cover;
+    /* position: relative; */
+    width: 140px;
+    height: 140px;
+    transform: translate(290px, 40px);
+}
+
+#jupiter::before{
+    content: "Jup";
+    display: inline-block;
+    color: white;
+    background: black;
+    font-size: 18px;
+    margin: 50px 70px;
+}
+
+#saturn{
+    background-image: url("images/trans-saturn2.png");
+    background-position: center center;
+    background-size: cover;
+    /* position: relative; */
+    width: 190px;
+    height: 190px;
+    /* margin-left: 5px; */
+    margin: -40px 0;
+    transform: translate(325px, 365px);
+}
+#saturn::before{
+    content: "Sat";
+    display: inline-block;
+    color: white;
+    background: black;
+    font-size: 18px;
+    margin: 70px 100px;
+    transform: rotate(45deg);
+}
+
+
+#uranus{
+    background-image: url("images/trans-uranus.png");
+    background-position: center center;
+    background-size: cover;
+    /* position: relative; */
+    width: 220px;
+    height: 200px;
+    margin: -30px 0;
+    transform: translate(250px, -65px);
+}
+
+#uranus::before{
+    content: "Ura";
+    display: inline-block;
+    color: white;
+    background: black;
+    font-size: 18px;
+    margin: 70px 100px;
+    transform: rotate(-60deg);
+}
+
+#neptune{
+    background-image: url("images/neptune.jpg");
+    background-position: center center;
+    background-size: cover;
+    width: 90px;
+    height: 90px;
+    margin: 120px 0;
+    transform: translate(460px, 490px);
+}
+
+#neptune::before{
+    content: "Nep";
+    display: inline-block;
+    color: white;
+    background: black;
+    font-size: 18px;
+    margin: 30px 40px;
+    transform: rotate(90deg);
+}
+
+
+@keyframes rotation{
+    0%   {transform: rotate(0deg)}
+    /* 0%  {left:0px; top:0px;}
+    25%  {left:100px; top:0px;}
+    50%  {left:200px; top:200px;}
+    75%  {left:0px; top:10px;}
+    100%  {left:0px; top:0px;} */
+    100% {transform: rotate(360deg)}
+}
+
+.points-on-axis{
+    position: relative;
+    /* top: -5px; */
+    width: 10px;
+    height: 10px;
+    margin: 0 auto;
+    border-radius: 50%;
+    border: 1px solid red;
+    background-color: red;
+    /* transform-style: preserve-3d;
+    transform: rotateZ(30deg); */
+}
+
+#mercury-points{
+    position: relative;
+    top: 160px;
+    left: 50px;
+}
+
+#mercury-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white;
+    transform: translate(10px, -15px);
+}
+
+#mercury-halfway-point{
+    position: relative;
+    transform: translate(25px, 35px);
+}
+
+#mercury-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white; 
+    transform: translate(5px, -15px);
+}
+
+#venus-points{
+    position: relative;
+    top: 90px;
+    left: 90px;
+}
+
+#venus-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white;
+    transform: translate(10px, -15px);
+}
+
+#venus-halfway-point{
+    position: relative;
+    transform: translate(-60px, 117px);
+}
+
+#venus-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white; 
+    transform: translate(5px, -15px);
+}
+
+#earth-points{
+    position: relative;
+    top: 75px;
+    left: 27px;
+}
+
+#earth-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white;
+    transform: translate(10px, -15px);
+}
+
+#earth-halfway-point{
+    position: relative;
+    transform: translate(70px, 107px);
+}
+
+#earth-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white; 
+    transform: translate(5px, -15px);
+}
+
+#mars-points{
+    position: relative;
+    top: 85px;
+    left: 158px;
+}
+
+#mars-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white;
+    transform: translate(10px, -15px);
+}
+
+#mars-halfway-point{
+    position: relative;
+    z-index: 8;
+    transform: translate(-195px, 60px);
+}
+
+#mars-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white; 
+    transform: translate(5px, -15px);
+}
+
+#jupiter-points{
+    position: relative;
+    top: -77px;
+    left: 134px;
+}
+
+#jupiter-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white;
+    transform: translate(10px, -15px);
+}
+
+#jupiter-halfway-point{
+    position: relative;
+    transform: translate(-150px, 312px);
+}
+
+#jupiter-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white; 
+    transform: translate(5px, -15px);
+}
+
+#saturn-points{
+    position: relative;
+    top: 13px;
+    left: 213px;
+}
+
+#saturn-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white;
+    transform: translate(10px, -15px);
+}
+
+#saturn-halfway-point{
+    position: relative;
+    z-index: 8;
+    transform: translate(-305px, 105px);
+}
+
+#saturn-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white; 
+    transform: translate(5px, -15px);
+}
+
+#uranus-points{
+    position: relative;
+    top: -107px;
+    left: -20px;
+}
+
+#uranus-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white;
+    transform: translate(10px, -15px);
+}
+
+#uranus-halfway-point{
+    position: relative;
+    transform: translate(165px, 275px);
+}
+
+#uranus-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white; 
+    transform: translate(5px, -15px);
+}
+
+#neptune-points{
+    position: relative;
+    top: -60px;
+    left: 272px;
+}
+
+#neptune-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white;
+    transform: translate(10px, -15px);
+}
+
+#neptune-halfway-point{
+    position: relative;
+    z-index: 8;
+    transform: translate(-430px, 155px);
+}
+
+#neptune-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    color: white; 
+    transform: translate(5px, -15px);
+}
+
+.play-pause{
+    /* background-color: black; */
+    color: white;
+    position: absolute;
+    left: 50px;
+    margin: auto;
+    font-size: 24px;
+}
+
+.play-pause a{
+    color: white;
+}
+
+i.fa-pause{
+    /* content: "\f04c";
+    font-family: "Font Awesome 5 Free"; */
+    display: none;
+    /* font-weight: 900; */
+}
