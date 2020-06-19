@@ -705,6 +705,7 @@ h1{
 
 .play-pause a{
     color: white;
+    text-decoration: none;
 }
 
 i.fa-pause{

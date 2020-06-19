@@ -1,41 +1,64 @@
-function dateTimer() {
-    var counter = 0;
-    function display(date) {
-        var d = document.getElementById('display-date').innerHTML = date;
+window.onload = () => { 
+    let intervalId = null;
+    let counter = 0;
+
+
+    function dateTimer() {
+        
+
+
+        // function display(date) {
+        counter += 1;
+        document.getElementById('display-date').innerHTML = counter;
+        
+        // }
     }
 
-    var repeatDate = setInterval(() => {
+    // dateTimer();
 
-        counter += 1
-        display(counter);
+    // let repeatDate = setInterval(() => {
 
-        if (counter == 10) {
-            clearInterval(repeatDate);
-            var restart = setTimeout(dateTimer, 2000);
-           
-        }
 
-    }, 1000);
+    //     dateTimer();
+    // }, 1000);
+
+
+    // let pauseCounter = clearInterval(repeatDate);
+
+
+
+    function playPause() {
+        // let repeatDate = null;
+
+        document.getElementById('play-btn').addEventListener('click', () => {
+            // alert('hjv')
+            document.querySelector('a #play-btn').style.display = 'none';
+            document.querySelector('a #pause-btn').style.display = 'inline-block';
+            document.querySelector('#neptune-axis').classList.add('neptune-axis-animation');
+
+            // repeat date timer
+            intervalId = setInterval(dateTimer, 1000)
+        });
+
+        document.getElementById('pause-btn').addEventListener('click', () => {
+
+            document.querySelector('a #play-btn').style.display = 'inline-block';
+            document.querySelector('a #pause-btn').style.display = 'none';
+            document.querySelector('#neptune-axis').classList.remove('neptune-axis-animation');
+
+            // pause date timer
+            if (intervalId) {
+                clearInterval(intervalId)
+            }
+        })
+    }
+
+    playPause()
+
 }
 
 
 
-document.getElementById('#play-btn').addEventListener('click', () => {
-    
-    dateTimer();
-    document.querySelector('a #play-btn').style.display = 'none';
-    document.querySelector('a #pause-btn').style.display = 'block';
-    document.querySelector('#neptune-axis').classList.add('neptune-axis-animation');
-})
-
-document.querySelector('a #pause-btn').addEventListener('click', () => {
-
-    dateTimer();
-
-    document.querySelector('a #play-btn').style.display = 'block';
-    document.querySelector('a #pause-btn').style.display = 'none';
-    document.querySelector('#neptune-axis').classList.remove('neptune-axis-animation');
-})
 
     
         
