@@ -80,11 +80,12 @@ h1{
     transform-style: preserve-3d; 
 }
 
-.neptune-axis-animation{
+#neptune-axis{
     position: relative;
     width: 700px;
     height: 700px;
     animation: rotation 40s linear reverse infinite; 
+    animation-play-state: paused;
 }
 
 .circle2{
@@ -421,13 +422,13 @@ h1{
 
 
 @keyframes rotation{
-    0%   {transform: rotate(0deg)}
+    from   {transform: rotate(0deg)}
     /* 0%  {left:0px; top:0px;}
     25%  {left:100px; top:0px;}
     50%  {left:200px; top:200px;}
     75%  {left:0px; top:10px;}
     100%  {left:0px; top:0px;} */
-    100% {transform: rotate(360deg)}
+    to {transform: rotate(360deg)}
 }
 
 .points-on-axis{

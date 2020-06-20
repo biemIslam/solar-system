@@ -1,44 +1,109 @@
-function dateTimer() {
-    var counter = 0;
-    function display(date) {
-        var d = document.getElementById('display-date').innerHTML = date;
+window.onload = () => { 
+    let intervalId = null;
+    let counter = 0;
+
+
+    function dateTimer() {
+        
+
+
+        // function display(date) {
+        counter += 1;
+        document.getElementById('display-date').innerHTML = counter;
+        
+        // }
     }
 
-    var repeatDate = setInterval(() => {
+    
 
-        counter += 1
-        display(counter);
 
-        if (counter == 10) {
-            clearInterval(repeatDate);
-            var restart = setTimeout(dateTimer, 2000);
-           
-        }
 
-    }, 1000);
+    function playPause() {
+
+        document.getElementById('play-btn').addEventListener('click', () => {
+            // alert('hjv')
+            document.querySelector('a #play-btn').style.display = 'none';
+            document.querySelector('a #pause-btn').style.display = 'inline-block';
+            document.querySelector('#neptune-axis').style.animationPlayState = 'running'
+            
+            // repeat date timer
+            intervalId = setInterval(dateTimer, 1000)
+        });
+
+        document.getElementById('pause-btn').addEventListener('click', () => {
+
+            document.querySelector('a #play-btn').style.display = 'inline-block';
+            document.querySelector('a #pause-btn').style.display = 'none';
+            document.querySelector('#neptune-axis').style.animationPlayState = 'paused'
+            // document.querySelector('#neptune-axis').classList.remove('neptune-axis-animation');
+
+            // var pauseNeptune = document.querySelector('#neptune-axis');
+            // var computedStyle = window.getComputedStyle(pauseNeptune),
+            //     marginLeft = computedStyle.getPropertyValue('');
+            // pauseNeptune.style.webkitAnimationState = marginLeft;
+            // pauseNeptune.classList.remove('neptune-axis-animation');    
+            // pause date timer
+            if (intervalId) {
+                clearInterval(intervalId)
+            }
+
+            function getCurrentRotation(el) {
+                var st = window.getComputedStyle(el, null);
+                var tm = st.getPropertyValue("-webkit-transform") ||
+                    st.getPropertyValue("-moz-transform") ||
+                    st.getPropertyValue("-ms-transform") ||
+                    st.getPropertyValue("-o-transform") ||
+                    st.getPropertyValue("transform") ||
+                    "none";
+                if (tm != "none") {
+                    var values = tm.split('(')[1].split(')')[0].split(',');
+                    /*
+                    a = values[0];
+                    b = values[1];
+                    angle = Math.round(Math.atan2(b,a) * (180/Math.PI));
+                    */
+                    //return Math.round(Math.atan2(values[1],values[0]) * (180/Math.PI)); //this would return negative values the OP doesn't wants so it got commented and the next lines of code added
+                    var angle = Math.round(Math.atan2(values[1], values[0]) * (180 / Math.PI));
+                    return (angle < 0 ? angle + 360 : angle); //adding 360 degrees here when angle < 0 is equivalent to adding (2 * Math.PI) radians before
+                }
+                return 0;
+            }
+            var currentAngle = getCurrentRotation(document.getElementById("neptune-axis"));
+            alert(currentAngle)
+            
+          
+
+            // function findTopLeft(element) {
+            //     var rec = document.getElementById(element).getBoundingClientRect();
+            //     return ({ top: rec.top, left: rec.left });
+            // }
+
+            // var pos = findTopLeft('neptune')
+            // alert(pos.top);
+            // alert(pos.left);
+
+        });
+
+        
+        // function getPosition(element) {
+        //     var rect = element.getBoundingClientRect();
+        //     return { x: rect.left, y: rect.top };
+        // }
+
+        // var el = document.getElementById('neptune');
+        // var pos = getPosition(el);
+
+        // // Alert position in X axis
+        // alert(pos.x);
+
+        // // Alert position in Y axis
+        // alert(pos.y);
+    }
+    playPause()
+    
 }
 
 
-function playPause() {
-    document.getElementById('play-btn').addEventListener('click', () => {
-        // alert('hjv')
-        dateTimer();
-        document.querySelector('a #play-btn').style.display = 'none';
-        document.querySelector('a #pause-btn').style.display = 'inline-block';
-        document.querySelector('#neptune-axis').classList.add('neptune-axis-animation');
-    });
-
-    document.getElementById('pause-btn').addEventListener('click', () => {
-
-        dateTimer();
-
-        document.querySelector('a #play-btn').style.display = 'inline-block';
-        document.querySelector('a #pause-btn').style.display = 'none';
-        document.querySelector('#neptune-axis').classList.remove('neptune-axis-animation');
-    })
-}
-
-playPause()
 
 
     
