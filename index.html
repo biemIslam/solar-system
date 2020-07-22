@@ -8,83 +8,87 @@
         <link rel="stylesheet" href="css/fontawesome5/css/all.min.css">
     </head>
     <body>
-        <h1>Our Solar System </h1>
-        <div class="play-pause">
-            <a id="parent" href="#"> 
-                <i id="play-btn" class="fas fa-play"></i> 
-                <i id="pause-btn" class="fas fa-pause"></i> 
-            </a>
-            <span id="display-date"></span>
-        </div>
-        <div id="mercury-points">
-            <div id="mercury-startEnd-point" class="points-on-axis"></div>
-            <div id="mercury-halfway-point" class="points-on-axis"></div>
-        </div>
-        <div id="venus-points">
-            <div id="venus-startEnd-point" class="points-on-axis"></div>
-            <div id="venus-halfway-point" class="points-on-axis"></div>
-        </div>
-        <div id="earth-points">
-            <div id="earth-startEnd-point" class="points-on-axis"></div>
-            <div id="earth-halfway-point" class="points-on-axis"></div>
-        </div>
-        <div id="mars-points">
-            <div id="mars-startEnd-point" class="points-on-axis"></div>
-            <div id="mars-halfway-point" class="points-on-axis"></div>
-        </div>
-        <div id="jupiter-points">
-            <div id="jupiter-startEnd-point" class="points-on-axis"></div>
-            <div id="jupiter-halfway-point" class="points-on-axis"></div>
-        </div>
-        <div id="saturn-points">
-            <div id="saturn-startEnd-point" class="points-on-axis"></div>
-            <div id="saturn-halfway-point" class="points-on-axis"></div>
-        </div>
-        <div id="uranus-points">
-            <div id="uranus-startEnd-point" class="points-on-axis"></div>
-            <div id="uranus-halfway-point" class="points-on-axis"></div>
-        </div>
-        <div id="neptune-points">
-            <div id="neptune-startEnd-point" class="points-on-axis"></div>
-            <div id="neptune-halfway-point" class="points-on-axis"></div>
-        </div>
-
-        <div class="container">
-            <div class="circle-wrapper">
-                <div  class="circles circle1">
-                    <div id="neptune-axis">
-                        <div id="neptune" class="circle lighting"></div>
-                    </div>
-                    <div class="circles circle2">
-                        <div id="uranus-axis">
-                            <div id="uranus" class="circle lighting"></div>
-                        </div>
-                        <div class="circles circle3">
-                            <div id="saturn-axis">
-                                <div id="saturn" class="circle lighting"></div>
+        <div class="main-container">
+            <div id="first-div">
+                <h1>Our Solar System </h1>
+                <div class="play-pause">
+                    <a id="parent" href="#">
+                        <i id="play-btn" class="fas fa-play"></i>
+                        <i id="pause-btn" class="fas fa-pause"></i>
+                    </a>
+                    <span id="display-date"></span>
+                </div>
+                <div id="mercury-points">
+                    <div id="mercury-startEnd-point" class="points-on-axis"></div>
+                    <div id="mercury-halfway-point" class="points-on-axis"></div>
+                </div>
+                <div id="venus-points">
+                    <div id="venus-startEnd-point" class="points-on-axis"></div>
+                    <div id="venus-halfway-point" class="points-on-axis"></div>
+                </div>
+                <div id="earth-points">
+                    <div id="earth-startEnd-point" class="points-on-axis"></div>
+                    <div id="earth-halfway-point" class="points-on-axis"></div>
+                </div>
+                <div id="mars-points">
+                    <div id="mars-startEnd-point" class="points-on-axis"></div>
+                    <div id="mars-halfway-point" class="points-on-axis"></div>
+                </div>
+                <div id="jupiter-points">
+                    <div id="jupiter-startEnd-point" class="points-on-axis"></div>
+                    <div id="jupiter-halfway-point" class="points-on-axis"></div>
+                </div>
+                <div id="saturn-points">
+                    <div id="saturn-startEnd-point" class="points-on-axis"></div>
+                    <div id="saturn-halfway-point" class="points-on-axis"></div>
+                </div>
+                <div id="uranus-points">
+                    <div id="uranus-startEnd-point" class="points-on-axis"></div>
+                    <div id="uranus-halfway-point" class="points-on-axis"></div>
+                </div>
+                <div id="neptune-points">
+                    <div id="neptune-startEnd-point" class="points-on-axis"></div>
+                    <div id="neptune-halfway-point" class="points-on-axis"></div>
+                </div>
+            
+                <div class="planet-plane">
+                    <div class="circle-wrapper">
+                        <div class="circles circle1">
+                            <div id="neptune-axis" class="animated setToRotate">
+                                <div id="neptune" class="circle lighting"></div>
                             </div>
-                            <div class="circles circle4">
-                                <div id="jupiter-axis">
-                                    <div id="jupiter" class="circle lighting"></div>
+                            <div class="circles circle2">
+                                <div id="uranus-axis">
+                                    <div id="uranus" class="circle lighting"></div>
                                 </div>
-                                <div class="circles circle5">
-                                    <div id="mars-axis">
-                                        <div id="mars" class="circle lighting"></div>
+                                <div class="circles circle3">
+                                    <div id="saturn-axis">
+                                        <div id="saturn" class="circle lighting"></div>
                                     </div>
-                                    <div class="circles circle6">
-                                        <div id="earth-axis">
-                                            <div id="earth" class="circle lighting"></div>
+                                    <div class="circles circle4">
+                                        <div id="jupiter-axis">
+                                            <div id="jupiter" class="circle lighting"></div>
                                         </div>
-                                        <div class="circles circle7">
-                                            <div id="venus-axis">
-                                                <div id="venus" class="circle lighting"></div>
+                                        <div class="circles circle5">
+                                            <div id="mars-axis">
+                                                <div id="mars" class="circle lighting"></div>
                                             </div>
-                                            <div class="circles circle8">
-                                                <div id="mercury-axis">
-                                                    <div id="mercury" class="circle lighting"></div>
+                                            <div class="circles circle6">
+                                                <div id="earth-axis" class="animated setToRotate">
+                                                    <div id="earth" class="circle lighting"></div>
                                                 </div>
-                                                <div class="circles circle9">
-                                                    <div id="the-sun"></div>
+                                                <div class="circles circle7">
+                                                    <div id="venus-axis">
+                                                        <div id="venus" class="circle lighting"></div>
+                                                    </div>
+                                                    <div class="circles circle8">
+                                                        <div id="mercury-axis" class="animated setToRotate">
+                                                            <div id="mercury" class="circle lighting"></div>
+                                                        </div>
+                                                        <div class="circles circle9">
+                                                            <div id="the-sun"></div>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -95,13 +99,34 @@
                     </div>
                 </div>
             </div>
-        </div>
-
-       
-
-        
-        
+            <div id="second-div">
+                <div class="moving-letters">
+                    <p>Eight (8) Planets</p>
+                    <p> Terrestial (first 4) and the Gas Giants (last 4)</p>
+                    <p>Mercury, Mer is the smallest, fastest and closest planet to the sun</p>
+                    <p>A complete cycle or year on planet Mercury is about 88 Earth days long</p>
+                    <p>About 4 cycles of mercury around the sun makes up a year of planet Earth </p>
+                    <p>Venus is the hottest planet in the solar system</p>
+                    <p>Earth is the largest of terrestial planets and fifth largest of all planets</p>
+                    <p>Mars is the last of terrestial planets and second smallest after Mercury. Takes 687
+                        days to complete one revolution round the sun
+                    </p>
+                    <p>Jupiter is the largest planet in the solar system. Takes 12 years
+                        to complete one revolution round thes sun
+                    </p>
+                    <p>Saturn is the second largest planet in the solar system. Takes 29.4 Earth years
+                        to complete one revolution round thes sun
+                    </p>
+                    <p>Uranus is the third of the gas giants. It is the coldest planet in the solar system.
+                        Takes 84.3 years to complete one revolution round thes sun
+                    </p>
+                    <p>Neptune is the fourth of the gas giants. It has 14 known moons.
+                        Takes 164.8 years to complete one revolution round thes sun
+                    </p>
+                </div>
+            </div>
+        </div>       
     </body>
-
     <script src="custom.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script> -->
 </html>
