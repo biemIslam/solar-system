@@ -792,6 +792,18 @@ span#display-date{
     margin: 120px 0 0;
 } */
 
+@media only screen and (min-width: 360px){
+    .planet-plane{
+        height: 250px;
+    }
+
+    .circle-wrapper {
+        position: relative;
+        top: 60%;
+        /* left: 10%; */
+    }
+}
+
 @media only screen and (min-width: 768px){
     #first-div {
         max-width: 100%;
@@ -801,10 +813,8 @@ span#display-date{
     }
 
     .circle-wrapper {
-        /* margin: -30px auto; */
         position: relative;
         top: 75%;
-        /* border: 1px solid red; */
     }
 
     #planets-type {
@@ -826,11 +836,9 @@ span#display-date{
     }
 
     .circle-wrapper {
-        /* margin: -30px auto; */
         position: relative;
         top: 95%;
         left: 12%;
-        /* border: 1px solid red; */
     }
 
     #second-div {
