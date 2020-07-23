@@ -22,11 +22,8 @@ body{
 
 .main-container {
     max-width: 100%;
-    /* width: 50%; */
     height: auto;
     margin: 10px auto;
-    /* display: flex; */
-    /* justify-content: space-around */
 }
 
 #first-div {
@@ -43,19 +40,20 @@ body{
     /* display: none; */
 }
 
-.moving-letters p:first-child {
+.moving-letters > p:first-child {
     font-size: 32px;
     color: yellow;
 }
 
-.moving-letters p {
+.planet-type-list h3{
     font-size: 24px;
     color: turquoise;
 }
 
-ul.planet-list {
+ul {
     list-style-type: none;
-    
+    color: white;
+    /* font-size: 14px */
 }
 
 .planet-plane{
@@ -794,6 +792,51 @@ span#display-date{
     margin: 120px 0 0;
 } */
 
-@media only screen and (max-width: 767px){
+@media only screen and (min-width: 768px){
+    #first-div {
+        max-width: 100%;
+        width: 50%;
+        height: auto;
+        margin: 0px auto;
+    }
 
+    .circle-wrapper {
+        /* margin: -30px auto; */
+        position: relative;
+        top: 75%;
+        /* border: 1px solid red; */
+    }
+
+    #planets-type {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #second-div {
+        max-width: 100%;
+        width: 80%;
+        height: auto;
+        margin: 0px auto;
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    .planet-plane{
+        height: 150px;
+    }
+
+    .circle-wrapper {
+        /* margin: -30px auto; */
+        position: relative;
+        top: 95%;
+        left: 12%;
+        /* border: 1px solid red; */
+    }
+
+    #second-div {
+        max-width: 100%;
+        width: 50%;
+        height: auto;
+        margin: 100px auto;
+    }
 }
