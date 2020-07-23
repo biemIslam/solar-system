@@ -10,9 +10,12 @@ html, body {
 
 body{
     /* width: 100%; */
-    
     background-image: url("night-sky.jpeg");
+    background-position: center center;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: #cdae74;
     color: white;
     /* background-position: 50% 50%; */
 }
@@ -492,9 +495,14 @@ h1{
 }
 
 #mercury-points{
+    /* position: relative; */
+    /* top: 160px; */
+    /* left: 50px; */
+}
+
+#mercury-startEnd-point{
     position: relative;
-    top: 160px;
-    left: 50px;
+    transform: translate(-13px, 80px);
 }
 
 #mercury-startEnd-point::before{
@@ -509,10 +517,70 @@ h1{
 
 #mercury-halfway-point{
     position: relative;
-    transform: translate(25px, 35px);
+    transform: translate(12px, 120px);
 }
 
 #mercury-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white;  */
+    transform: translate(5px, -15px);
+}
+
+#venus-startEnd-point{
+    position: relative;
+    transform: translate(47px, 95px);
+}
+
+#venus-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white; */
+    transform: translate(10px, -15px);
+}
+
+#venus-halfway-point{
+    position: relative;
+    transform: translate(-51px, 140px);
+}
+
+#venus-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white;  */
+    transform: translate(5px, -15px);
+}
+
+#earth-startEnd-point{
+    position: relative;
+    transform: translate(-28px, 95px);
+}
+
+#earth-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white; */
+    transform: translate(10px, -15px);
+}
+
+#earth-halfway-point{
+    position: relative;
+    transform: translate(28px, 185px);
+}
+
+#earth-halfway-point::before{
     /* M is equal to half of one revolution */
     content: "M";
     display: inline-block;
