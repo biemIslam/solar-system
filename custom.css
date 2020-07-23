@@ -36,8 +36,26 @@ body{
 }
 
 #second-div {
+    padding: 20px;
+    color: white;
+    line-height: 2.5em;
+    font-size: 1.1em;
+    /* display: none; */
+}
+
+.moving-letters p:first-child {
+    font-size: 32px;
+    color: yellow;
+}
+
+.moving-letters p {
+    font-size: 24px;
+    color: turquoise;
+}
+
+ul.planet-list {
+    list-style-type: none;
     
-    display: none;
 }
 
 .planet-plane{
@@ -119,9 +137,9 @@ h1{
 
 #neptune-axis{
     position: relative;
-    /* width: 700px;
-    height: 700px; */
-    animation-duration: 40s;
+    width: 470px;
+    height: 470px;
+    animation-duration: 1504s;
     /* animation: rotation 40s linear reverse infinite; */
     /* animation-play-state: paused; */
 }
@@ -139,9 +157,9 @@ h1{
 
 .uranus-axis-animation{
     position: relative;
-    /* width: 600px;
-    height: 600px; */
-    animation: rotation 35s linear reverse infinite; 
+    width: 400px;
+    height: 400px;
+    animation-duration: 767s; 
 }
 
 .circle3{
@@ -157,9 +175,9 @@ h1{
 
 .saturn-axis-animation{
     position: relative;
-    /* width: 500px;
-    height: 500px; */
-    animation: rotation 30s linear reverse infinite; 
+    width: 340px;
+    height: 340px;
+    animation-duration: 268s;
 }
 
 .circle4{
@@ -173,11 +191,11 @@ h1{
     /* animation: rotation 25s linear reverse infinite;  */
 }
 
-.jupiter-axis-animation{
+#jupiter-axis {
     position: relative;
-    /* width: 400px;
-    height: 400px; */
-    animation: rotation 25s linear reverse infinite; 
+    width: 290px;
+    height: 290px;
+    animation-duration: 105s; 
 }
 
 .circle5{
@@ -191,11 +209,11 @@ h1{
     /* animation: rotation 20s linear reverse infinite;  */
 }
 
-.mars-axis-animation{
+#mars-axis {
     position: relative;
-    /* width: 320px;
-    height: 320px; */
-    animation: rotation 20s linear reverse infinite; 
+    width: 250px;
+    height: 250px;
+    animation-duration: 83s; 
 }
 
 .circle6{
@@ -212,8 +230,8 @@ h1{
 
 #earth-axis{
     position: relative;
-    /* width: 250px;
-    height: 250px; */
+    width: 210px;
+    height: 210px;
     animation-duration: 40s;
     /* animation: rotation 15s linear reverse infinite; */
     /* animation-play-state: paused;  */
@@ -230,11 +248,11 @@ h1{
     /* animation: rotation 10s linear reverse infinite;  */
 }
 
-.venus-axis-animation{
+#venus-axis{
     position: relative;
-    /* width: 160px;
-    height: 160px; */
-    animation: rotation 10s linear reverse infinite; 
+    width: 160px;
+    height: 160px;
+    animation-duration: 25s;
 }
 
 .circle8{
@@ -250,8 +268,8 @@ h1{
 
 #mercury-axis {
     position: relative;
-    /* width: 100px;
-    height: 100px; */
+    width: 100px;
+    height: 100px;
     animation-duration: 10s; 
 }
 
@@ -267,27 +285,6 @@ h1{
     background-size: cover;
     /* animation: rotation 40s linear reverse infinite; */
     animation: rotation 2s linear reverse infinite;
-}
-
-.threeDee-box{
-    width: 0;
-    height: 0;
-    margin: 0 auto;
-    position: relative;
-    top: 100px;
-    /* left: 50px; */
-    perspective: 500px;
-}
-
-.threeDee-object{
-    width: 100%;
-    height: 100%;
-    position: relative;
-    transform-style: preserve-3d;
-    animation-name: rotation;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
 }
 
 
@@ -322,7 +319,8 @@ h1{
     /* position: relative; */
     width: 55px;
     height: 55px;
-    transform: translate(120px, 10px);
+    /* transform: translate(47px, 95px); */
+    transform: translate(120px, 85px);
 }
 
 #venus::before{
@@ -341,7 +339,7 @@ h1{
     /* position: relative; */
     width: 70px;
     height: 70px;
-    transform: translate(90px, 210px);
+    transform: translate(80px, -30px);
 }
 
 #earth::before{
@@ -350,8 +348,8 @@ h1{
     /* color: white; */
     background: black;
     font-size: 18px;
-    margin: 15px 30px;
-    transform: rotate(60deg);
+    margin: 15px 20px;
+    transform: rotate(-70deg);
 }
 
 #mars{
@@ -361,7 +359,7 @@ h1{
     width: 40px;
     height: 40px;
     margin: 60px 0;
-    transform: translate(220px, 210px);
+    transform: translate(205px, 117px);
 }
 
 #mars::before{
@@ -378,9 +376,9 @@ h1{
     background-position: center center;
     background-size: cover;
     /* position: relative; */
-    width: 140px;
-    height: 140px;
-    transform: translate(290px, 40px);
+    width: 120px;
+    height: 120px;
+    transform: translate(-70px, 115px);
 }
 
 #jupiter::before{
@@ -397,11 +395,11 @@ h1{
     background-position: center center;
     background-size: cover;
     /* position: relative; */
-    width: 190px;
-    height: 190px;
+    width: 160px;
+    height: 160px;
     /* margin-left: 5px; */
     margin: -40px 0;
-    transform: translate(325px, 365px);
+    transform: translate(230px, 210px);
 }
 #saturn::before{
     content: "Sat";
@@ -409,7 +407,7 @@ h1{
     /* color: white; */
     background: black;
     font-size: 18px;
-    margin: 70px 100px;
+    margin: 50px 80px;
     transform: rotate(45deg);
 }
 
@@ -419,10 +417,10 @@ h1{
     background-position: center center;
     background-size: cover;
     /* position: relative; */
-    width: 220px;
-    height: 200px;
+    width: 170px;
+    height: 170px;
     margin: -30px 0;
-    transform: translate(250px, -65px);
+    transform: translate(145px, -45px);
 }
 
 #uranus::before{
@@ -442,7 +440,7 @@ h1{
     width: 90px;
     height: 90px;
     margin: 120px 0;
-    transform: translate(460px, 490px);
+    transform: translate(410px, 45px);
 }
 
 #neptune::before{
@@ -452,7 +450,7 @@ h1{
     background: black;
     font-size: 18px;
     margin: 30px 40px;
-    transform: rotate(90deg);
+    transform: rotate(-35deg);
 }
 
 
@@ -547,7 +545,7 @@ h1{
 
 #venus-halfway-point{
     position: relative;
-    transform: translate(-51px, 140px);
+    transform: translate(-51px, 130px);
 }
 
 #venus-halfway-point::before{
@@ -581,6 +579,162 @@ h1{
 }
 
 #earth-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white;  */
+    transform: translate(5px, -15px);
+}
+
+#mars-startEnd-point{
+    position: relative;
+    /* z-index: 8; */
+    transform: translate(75px, 120px);
+}
+
+#mars-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white; */
+    transform: translate(10px, -15px);
+}
+
+#mars-halfway-point{
+    position: relative;
+    /* z-index: 8; */
+    transform: translate(-78px, 185px);
+}
+
+#mars-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white;  */
+    transform: translate(5px, -15px);
+}
+
+#jupiter-startEnd-point{
+    position: relative;
+    transform: translate(-80px, 287px);
+}
+
+#jupiter-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white; */
+    transform: translate(10px, -15px);
+}
+
+#jupiter-halfway-point{
+    position: relative;
+    transform: translate(50px, 60px);
+}
+
+#jupiter-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white;  */
+    transform: translate(5px, -15px);
+}
+
+#saturn-startEnd-point{
+    position: relative;
+    /* z-index: 8; */
+    transform: translate(103px, 145px);
+}
+
+#saturn-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white; */
+    transform: translate(10px, -15px);
+}
+
+#saturn-halfway-point{
+    position: relative;
+    /* z-index: 8; */
+    transform: translate(-106px, 240px);
+}
+
+#saturn-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white;  */
+    transform: translate(5px, -15px);
+}
+
+#uranus-startEnd-point{
+    position: relative;
+    transform: translate(-57px, 130px);
+}
+
+#uranus-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white; */
+    transform: translate(10px, -15px);
+}
+
+#uranus-halfway-point{
+    position: relative;
+    transform: translate(53px, 310px);
+}
+
+#uranus-halfway-point::before{
+    /* M is equal to half of one revolution */
+    content: "M";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white;  */
+    transform: translate(5px, -15px);
+}
+
+#neptune-startEnd-point{
+    position: relative;
+    /* z-index: 8; */
+    transform: translate(110px, 64px);
+}
+
+#neptune-startEnd-point::before{
+    /* R is equal to one revolution */
+    content: "R";
+    display: inline-block;
+    font-weight: 900;
+    font-size: 7px;
+    /* color: white; */
+    transform: translate(10px, -15px);
+}
+
+#neptune-halfway-point{
+    position: relative;
+    /* z-index: 8; */
+    transform: translate(-125px, 400px);
+}
+
+#neptune-halfway-point::before{
     /* M is equal to half of one revolution */
     content: "M";
     display: inline-block;
